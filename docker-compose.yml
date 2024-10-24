@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   workflow-api:
     container_name: workflow-api
@@ -8,6 +10,7 @@ services:
       - "3000:3000"
     networks:
       - app-network
+      - shared-network
 
   workflow-app:
     container_name: workflow-app
@@ -18,8 +21,10 @@ services:
       - "4000:80"
     networks:
       - app-network
+      - shared-network
 
 networks:
   app-network:
     driver: bridge
+  shared-network:
     external: true
