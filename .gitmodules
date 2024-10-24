@@ -1,0 +1,8 @@
+[submodule "workflow-app"]
+	path = workflow-app
+	url = https://github.com/Kiratopat-s/workflow-app
+	branch = master
+[submodule "workflow-api"]
+	path = workflow-api
+	url = https://github.com/Kiratopat-s/workflow-api
+	branch = master
