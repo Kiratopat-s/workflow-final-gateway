@@ -1,0 +1,24 @@
+services:
+  workflow-api:
+    container_name: workflow-api
+    build:
+      context: ./workflow-api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+  workflow-app:
+    container_name: workflow-app
+    build:
+      context: ./workflow-app
+      dockerfile: Dockerfile
+    ports:
+      - "4000:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
